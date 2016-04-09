@@ -1,0 +1,15 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = File
+Target = usr/src/*/dkms.conf
+Target = lib/modules/*/
+Target = !lib/modules/extramodules-*
+Target = !lib/modules/*/?*
+
+[Action]
+Description = Install DKMS modules
+Depends = dkms
+When = PostTransaction
+Exec = /lib/dkms/alpm-hook install
+NeedsTargets

@@ -1,0 +1,15 @@
+[Trigger]
+Operation = Upgrade
+Operation = Remove
+Type = File
+Target = usr/src/*/dkms.conf
+Target = lib/modules/*/
+Target = !lib/modules/extramodules-*
+Target = !lib/modules/*/?*
+
+[Action]
+Description = Remove DKMS modules
+Depends = dkms
+When = PreTransaction
+Exec = /lib/dkms/alpm-hook remove -q
+NeedsTargets
