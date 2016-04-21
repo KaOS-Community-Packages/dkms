@@ -2,7 +2,7 @@
 pkgname=dkms
 pkgver=2.2.0.3+git151023
 pkgrel=1
-pkgdesc='Dynamic Kernel Modules System'
+pkgdesc='Dynamic Kernel Module Support'
 arch=('x86_64')
 url='http://linux.dell.com/dkms/'
 license=('GPL2')
