@@ -8,7 +8,7 @@ url='http://linux.dell.com/dkms/'
 license=('GPL2')
 depends=('bash' 'kmod' 'gcc' 'make' 'patch')
 makedepends=('git')
-optdepends=('linux-headers: build modules against the Arch kernel')
+optdepends=('linux-headers')
 backup=('etc/dkms/framework.conf')
 install=$pkgname.install
 source=('git+git://linux.dell.com/dkms.git#commit=7b6e78f'
